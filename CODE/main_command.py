@@ -1,32 +1,25 @@
-import datetime
-import speech
-import psutil
+from get_features import get_features
+from feature_functions import *
 import os
+import speech
+
+features = get_features()
 
 def get_main_command(result):
 
     message = ""
     conversation_state = True
 
-    if "hello" in result:
-        message = "Hi, how can i help you? :)"
-    elif "what time" in result:
-        message = "Now it is: " + str(datetime.datetime.now().time())
-    elif "who are you" in result:
-        message = "Well actually I am a computer program, thus I'm no much more than logic being implemented over wire and some electricity, but I may help you if you like :)"
-    elif "report" in result:
-        message = "battery: " + str(psutil.sensors_battery().percent) + "%"
-    elif "bye" in result:
-        message = "See you later :)"
-        conversation_state = False
-    elif "shut down" in result:
-        message = "shutting down"
-        os.system('shutdown -s')
-    elif "what can you do" in result:
-        message = "currently I can tell you:\n-battery state\n-what time it is"
-    else:
+    for feature in features:
+        if feature.command in result:
+            if(feature.answer != None):
+                message = feature.answer
+            if(feature.function != None):
+                message = feature.function()
+    if(message == ""):
         message = "Sorry but '" + result + "', doesn't mean anything to me"
 
+    os.system('cls')
     print message
     #speech.say(message)
     return conversation_state
