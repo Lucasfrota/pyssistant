@@ -1,6 +1,6 @@
-from listen import listen
-from get_audio import get_audio
-from main_command import get_main_command
+from util.listen import listen
+from util.get_audio import get_audio
+from util.main_command import get_main_command
 
 if __name__ == "__main__":
 

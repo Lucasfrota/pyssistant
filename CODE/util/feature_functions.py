@@ -14,3 +14,7 @@ def get_shut_down():
 
 def what_can_i_do():
     return "I can do things :)"
+
+def open_android_studio():
+    os.system('start notepad')
+    return "Opening android studio good luck with java :)"
