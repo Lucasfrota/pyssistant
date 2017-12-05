@@ -8,6 +8,9 @@ def get_time():
 def get_report():
     return "battery: " + str(psutil.sensors_battery().percent) + "%"
 
+def get_bye():
+    return False
+
 def get_shut_down():
     print "let's pretend it is shutting down, ok?"
     #os.system('shutdown -s')

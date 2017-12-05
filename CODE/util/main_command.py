@@ -10,12 +10,18 @@ def get_main_command(result):
     message = ""
     conversation_state = True
 
+    result = result.lower()
+
     for feature in features:
         if feature.command in result:
             if(feature.answer != None):
                 message = feature.answer
             if(feature.function != None):
-                message = feature.function()
+                print type(feature.function())
+                if(type(feature.function()) == str):
+                    message = feature.function()
+                else:
+                    conversation_state = feature.function()
     if(message == ""):
         message = "Sorry but '" + result + "', doesn't mean anything to me"
 
