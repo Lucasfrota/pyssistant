@@ -13,4 +13,11 @@ def get_mic():
 
 if __name__ == "__main__":
 
-    get_mic()
+    #get_mic()
+
+    try:
+        threading.Thread(target=get_mic, args=() ).start()
+        time.sleep(4)
+        threading.Thread(target=get_mic, args=() ).start()
+    except Exception:
+        print "Error"
