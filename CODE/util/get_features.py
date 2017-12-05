@@ -1,4 +1,4 @@
-from feature_model import feature
+from models.feature_model import feature
 from feature_functions import *
 
 def get_features():
@@ -12,4 +12,6 @@ def get_features():
     features.append(feature("what can you do", "what can you do", None, what_can_i_do ))
     features.append(feature("open android studio", "studio", None, open_android_studio))
     features.append(feature("love question", "you love me", "I am a computer, I don't have feelings but if I had im pretty sure i'd love to love you", None))
+    features.append(feature("what do you think about python?", "what do you think about python", "I love python, I am literally built of python :)", None))
+    features.append(feature("clear", "clear", "ok cleaning screen now", get_clean_screen))
     return features

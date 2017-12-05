@@ -1,4 +1,3 @@
-
 class feature:
 
     def __init__(self, name, command, answer, function):

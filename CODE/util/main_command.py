@@ -17,15 +17,15 @@ def get_main_command(result):
             if(feature.answer != None):
                 message = feature.answer
             if(feature.function != None):
-                print type(feature.function())
-                if(type(feature.function()) == str):
-                    message = feature.function()
-                else:
-                    conversation_state = feature.function()
+                function = feature.function()
+                if(type(function) == str):
+                    message = function
+                elif(function != None):
+                    conversation_state = function
     if(message == ""):
         message = "Sorry but '" + result + "', doesn't mean anything to me"
 
-    os.system('cls')
-    print message
+    #os.system('cls')
+    print "\n" + message + "\n"
     #speech.say(message)
     return conversation_state

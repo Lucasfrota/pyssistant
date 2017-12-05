@@ -1,3 +1,4 @@
+from models.menu_model import Menu
 import datetime
 import psutil
 import os
@@ -21,3 +22,12 @@ def what_can_i_do():
 def open_android_studio():
     os.system('start notepad')
     return "Opening android studio good luck with java :)"
+
+def get_clean_screen():
+    menu = Menu("Do you really want to do this?", "yes", "no")
+    answer = menu.show_menu()
+
+    if answer == True:
+        os.system('cls')
+    
+    return None
