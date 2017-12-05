@@ -11,4 +11,5 @@ def get_features():
     features.append(feature("shut down", "shut down", "shutting down", get_shut_down ))
     features.append(feature("what can you do", "what can you do", None, what_can_i_do ))
     features.append(feature("open android studio", "studio", None, open_android_studio))
+    features.append(feature("love question", "you love me", "I am a computer, I don't have feelings but if I had im pretty sure i'd love to love you", None))
     return features
