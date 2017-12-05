@@ -1,10 +1,10 @@
 import speech_recognition as sr
 
-def listen(name):
+def listen():
     audio = None
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("listening " + name)
+        print("listening")
         audio = r.listen(source, phrase_time_limit=4)
-        print("thinking... " + name )
+        print("thinking...")
     return audio

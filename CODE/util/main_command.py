@@ -19,7 +19,7 @@ def get_main_command(result):
     if(message == ""):
         message = "Sorry but '" + result + "', doesn't mean anything to me"
 
-    #os.system('cls')
+    os.system('cls')
     print message
     #speech.say(message)
     return conversation_state
