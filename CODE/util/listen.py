@@ -5,6 +5,6 @@ def listen(level=""):
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print(level+"listening")
-        audio = r.listen(source, phrase_time_limit=4)
+        audio = r.listen(source, phrase_time_limit=3)
         print(level+"thinking...")
     return audio

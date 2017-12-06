@@ -14,4 +14,6 @@ def get_features():
     features.append(feature("love question", "you love me", "I am a computer, I don't have feelings but if I had im pretty sure i'd love to love you", None))
     features.append(feature("what do you think about python?", "what do you think about python", "I love python, I am literally built of python :)", None))
     features.append(feature("clear", "clear", "ok cleaning screen now", get_clean_screen))
+    features.append(feature("open firefox", "open firefox", None, open_firefox))
+    features.append(feature("run program", "run", None, run_program))
     return features
