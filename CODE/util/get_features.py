@@ -1,4 +1,4 @@
-from models.feature_model import feature
+from models.feature import feature
 from feature_functions import *
 
 def get_features():

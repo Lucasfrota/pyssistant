@@ -1,4 +1,4 @@
-from models.menu_model import Menu
+from models.menu import Menu
 import datetime
 import psutil
 import os
