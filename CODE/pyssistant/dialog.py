@@ -1,6 +1,6 @@
 from listen import listen
 from get_audio import get_audio
-from util.models.feature import feature
+from models.feature import feature
 from sentence_analysis_module import SentenceAnalysis
 
 class Dialog:

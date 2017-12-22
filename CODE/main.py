@@ -1,9 +1,8 @@
-from util.dialog import Dialog
-from util.models.feature import feature
-from util.feature_functions import *
+from pyssistant.dialog import Dialog
+from pyssistant.models.feature import feature
+from pyssistant.feature_functions import *
 
 features = []
-#features.append(feature("hello", answer = "Hi, how can i help you? :)"))
 features.append(feature("what time", function = get_time ))
 features.append(feature("who are you", answer = "Well actually I am a computer program, thus I'm no much more than logic being implemented over wire and some electricity, but I may help you if you like :)"))
 features.append(feature("report", function = get_report ))

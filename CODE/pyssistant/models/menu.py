@@ -1,5 +1,5 @@
-from util.listen import listen
-from util.get_audio import get_audio
+from pyssistant.listen import listen
+from pyssistant.get_audio import get_audio
 
 class Menu:
 
