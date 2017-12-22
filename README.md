@@ -1,6 +1,6 @@
 # Pyssistant
 
-Pyssistant is meant to be an conversational interface that helps you with daily activities :)
+Pyssistant is designed to be an conversational interface builder. With some simples lines of code you can create a simple assistente to perform actions to you
 
 ## dependencies
 
