@@ -23,6 +23,6 @@ def get_audio(audio):
     except sr.UnknownValueError:
         print "I couldn't understand, sorry :("
     except sr.RequestError as e:
-        print("something went wrong: {0}".format(e))
+        print "something went wrong: {0}".format(e)
 
     return command

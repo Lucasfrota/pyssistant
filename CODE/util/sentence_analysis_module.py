@@ -1,4 +1,3 @@
-from get_features import get_features
 from feature_functions import *
 
 class SentenceAnalysis:
@@ -26,3 +25,4 @@ class SentenceAnalysis:
             message = "Sorry but '" + result + "', doesn't mean anything to me"
 
         print "\n" + message + "\n"
+        return conversation_state
