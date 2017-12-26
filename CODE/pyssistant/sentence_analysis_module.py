@@ -11,6 +11,14 @@ class SentenceAnalysis:
         conversation_state = True
         result = result.lower()
 
+        message = self.__get_message(result)
+
+        print "\n" + message + "\n"
+        return conversation_state
+
+    def __get_message(self, result):
+        message = ""
+
         for feature in self.dialog_list:
             if feature.command in result:
                 if(feature.answer != None):
@@ -24,5 +32,4 @@ class SentenceAnalysis:
         if(message == ""):
             message = "Sorry but '" + result + "', doesn't mean anything to me"
 
-        print "\n" + message + "\n"
-        return conversation_state
+        return message

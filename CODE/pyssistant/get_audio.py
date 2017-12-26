@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import urllib
 
-def is_connected():
+def __is_connected():
     status = None
     try:
         url = "https://www.google.com"
@@ -16,7 +16,7 @@ def get_audio(audio):
     command = ""
     r = sr.Recognizer()
     try:
-        if(is_connected() == True):
+        if(__is_connected() == True):
             command = r.recognize_google(audio)
         else:
             command = r.recognize_sphinx(audio)
