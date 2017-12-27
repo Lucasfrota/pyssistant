@@ -44,6 +44,8 @@ dialog.listen_once()
 dialog.start_listening()
 ```
 
+to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/blob/master/src/main.py)
+
 # dependencies
 
 * [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition/)
