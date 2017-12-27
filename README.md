@@ -18,7 +18,17 @@ features.append(feature("report", function=get_report))
 features.append(feature("bye", answer="See you later :)", function=get_bye))
 ```
 
-You may use a string type answer or even a function by means of "answer" and "function" parameters, if you are attributing to both of those parameters the "answer" parameter will be printed when the command is found in the inputted command, just like the function in the "function" parameter will be executed.
+You may use a string type answer or even a function by means of "answer" and "function" parameters, if you are attributing to both of those parameters the "answer" parameter will be printed when the command is found in the inputted command, just like the function in the "function" parameter will be executed. Now that you have created your dialog list is needed to create a dialog itself.
+
+```
+dialog = Dialog(features)
+```
+
+You are also able to insert new commands to your list directly from Dialog object
+
+```
+dialog.add_dialog("hello", answer="Hi, how can i help you? :)")
+```
 
 # dependencies
 
