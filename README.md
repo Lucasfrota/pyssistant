@@ -30,6 +30,20 @@ You are also able to insert new commands to your list directly from Dialog objec
 dialog.add_dialog("hello", answer="Hi, how can i help you? :)")
 ```
 
+Ok, now you have everything setted up, you just have to start listening! There two ways to start listening:
+
+* You may listen only a single command as in:
+
+```
+dialog.listen_once()
+```
+
+* You may keep listening in loop as in:
+
+```
+dialog.start_listening()
+```
+
 # dependencies
 
 * [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition/)
