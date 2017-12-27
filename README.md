@@ -2,7 +2,7 @@
 
 Pyssistant is designed to be an conversational interface builder. With some simples lines of code you can create a simple assistente to perform actions to you
 
-# How to use
+## How to use
 
 The first step to create an assistant with pyssistant is to import its dependencies, as shown in the following line
 
@@ -10,7 +10,7 @@ The first step to create an assistant with pyssistant is to import its dependenc
 from pyssistant.dialog import Dialog
 ```
 
-Then you'll have to create your dialog list, containing the commands and its answers, 
+Then you'll have to create your dialog list, containing the commands and its answers.
 
 ```
 features = []
@@ -18,12 +18,14 @@ features.append(feature("report", function=get_report))
 features.append(feature("bye", answer="See you later :)", function=get_bye))
 ```
 
-## dependencies
+You may use a string type answer or even a function by means of "answer" and "function" parameters, if you are attributing to both of those parameters the "answer" parameter will be printed when the command is found in the inputted command, just like the function in the "function" parameter will be executed.
+
+# dependencies
 
 * [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition/)
 * [PocketSphinx](https://github.com/cmusphinx/pocketsphinx)
 
-## Extra information
+# Extra information
 
 * This project is being built using python 2.7
 * suggestions are always welcome :)
