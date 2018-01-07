@@ -55,3 +55,4 @@ to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/bl
 
 * This project is being built using python 2.7
 * suggestions are always welcome :)
+* It's important to say that for now pyssistant only look for the specific word that was defined as command in the spoken sentence, we're still working to make pyssistant more intelligent :)
