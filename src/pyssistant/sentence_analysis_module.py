@@ -1,3 +1,11 @@
+from gtts import gTTS
+from tempfile import TemporaryFile
+
+def play_message(sentence, mp3_name):
+    tts = gTTS(text=sentence, lang="en")
+    f = TemporaryFile()
+    tts.write_to_fp(f)
+    f.close()
 
 class SentenceAnalysis:
 
@@ -31,4 +39,5 @@ class SentenceAnalysis:
         if(message == ""):
             message = "Sorry but '" + result + "', doesn't mean anything to me"
 
+        play_message(message, "text")
         return message
