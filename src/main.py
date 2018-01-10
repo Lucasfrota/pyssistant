@@ -3,7 +3,7 @@ This mais is an exemplo of how to use pyssistant
 """
 from pyssistant.dialog import Dialog
 from pyssistant.models.feature import feature
-from pyssistant.feature_functions import *
+from pyssistant.example_functionalities.feature_functions import *
 
 features = []
 features.append(feature("what time", function=get_time))

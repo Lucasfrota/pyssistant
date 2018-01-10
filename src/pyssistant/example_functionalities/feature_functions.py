@@ -1,4 +1,4 @@
-from models.menu import Menu
+from pyssistant.models.menu import Menu
 import datetime
 import psutil
 import os
