@@ -50,6 +50,7 @@ to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/bl
 
 * [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition/)
 * [PocketSphinx](https://github.com/cmusphinx/pocketsphinx)
+* [gTTS](https://pypi.python.org/pypi/gTTS)
 
 # Extra information
 
