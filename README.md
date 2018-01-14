@@ -1,4 +1,4 @@
-# Pyssistant
+# :snake: Pyssistant :snake:
 
 Pyssistant is designed to be an conversational interface builder. With some simples lines of code you can create a simple assistente to perform actions to you
 
@@ -54,6 +54,6 @@ to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/bl
 
 # Extra information
 
-* This project is being built using python 2.7
+* This project is being built using python 2.7 :snake:
 * suggestions are always welcome :)
 * It's important to say that for now pyssistant only look for the specific word that was defined as command in the spoken sentence, we're still working to make pyssistant more intelligent :)
