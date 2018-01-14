@@ -32,6 +32,7 @@ class SentenceAnalysis:
         message = self.__get_message(result)
 
         print "\n" + message + "\n"
+        play_message(message)
         return conversation_state
 
     def __get_message(self, result):
@@ -50,5 +51,4 @@ class SentenceAnalysis:
         if(message == ""):
             message = "Sorry but '" + result + "', doesn't mean anything to me"
 
-        play_message(message)
         return message

@@ -24,3 +24,4 @@ if __name__ == "__main__":
     dialog = Dialog(features)
     dialog.add_dialog("hello", answer="Hi, how can i help you? :)")
     dialog.start_listening()
+ 
