@@ -6,7 +6,7 @@ import os
 
 def get_time_str():
     time = str(datetime.datetime.now().time())
-    #time = time[2] = "_"
+    time = time.replace(":", "_")
     return time
 
 def play_message(sentence):
