@@ -22,6 +22,6 @@ features.append(feature("run", function=run_program))
 if __name__ == "__main__":
 
     dialog = Dialog(features)
-    dialog.add_dialog("hello", answer="Hi, how can i help you? :)")
-    dialog.start_listening()
- 
+    #dialog.add_dialog("hello", answer="Hi, how can i help you? :)")
+    #dialog.start_listening()
+    dialog.wait_call("hello")

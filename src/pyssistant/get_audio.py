@@ -26,3 +26,18 @@ def get_audio(audio):
         print "something went wrong: {0}".format(e)
 
     return command
+
+def get_audio_silently(audio):
+    command = ""
+    r = sr.Recognizer()
+    try:
+        if(__is_connected() == True):
+            command = r.recognize_google(audio)
+        else:
+            command = r.recognize_sphinx(audio)
+    except sr.UnknownValueError:
+        pass
+    except sr.RequestError as e:
+        pass
+
+    return command
