@@ -44,6 +44,14 @@ dialog.listen_once()
 dialog.start_listening()
 ```
 
+* It is also possible to set a keyword, the program will be "sleeping" while you don't say the keyword defined in the function wait_call
+
+```
+dialog.wait_call("hello")
+```
+
+In this example once the word "hello" is said the function listen once will be called
+
 to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/blob/master/src/main.py)
 
 # dependencies
