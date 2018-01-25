@@ -42,7 +42,9 @@ class SentenceAnalysis:
         if result != '':
             message = self.__get_message_background(result)
 
-            print "\n" + message + "\n"
+            if message != "":
+                print "\n" + message + "\n"
+
             try:
                 play_message(message)
             except Exception as e:
