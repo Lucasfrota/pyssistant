@@ -29,6 +29,12 @@ class Dialog:
                     self.listen_once()
                 self.__has_said_the_key_word = True
 
+    def __from_speach_to_text_background(self):
+        while True:
+            audio = lsiten_silently()
+            result = get_audio_silently(audio)
+            self.sentence_analyzer.get_command_in_background(result)
+
     def start_listening(self):
         """start a loop to listen to commands"""
         while True:
@@ -38,7 +44,7 @@ class Dialog:
         """listen only to one command"""
         audio = listen()
         result = get_audio(audio)
-        self.sentence_analyzer.get_main_command(result)
+        self.sentence_analyzer.get_command(result)
 
     def wait_call(self, key_word):
         try:
@@ -47,6 +53,17 @@ class Dialog:
             threading.Thread(target=self.__from_speach_to_text, args=(key_word, ) ).start()
             time.sleep(1)
             threading.Thread(target=self.__from_speach_to_text, args=(key_word, ) ).start()
+
+        except Exception as e:
+            print "Error: " + str(e)
+
+    def listen_in_background(self):
+        try:
+            threading.Thread(target=self.__from_speach_to_text_background, ).start()
+            time.sleep(1)
+            threading.Thread(target=self.__from_speach_to_text_background, ).start()
+            time.sleep(1)
+            threading.Thread(target=self.__from_speach_to_text_background, ).start()
 
         except Exception as e:
             print "Error: " + str(e)
