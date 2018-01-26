@@ -52,6 +52,12 @@ dialog.wait_call("hello")
 
 In this example once the word "hello" is said the function listen once will be called
 
+You may also let it listening in background, it will be listening in loop, once any of the commands is said its respective answer will be returned, when the answer is finished it will keep listening to you, waiting for the next command
+
+```
+dialog.listen_in_background()
+```
+
 to see the full exemple click [here](https://github.com/Lucasfrota/pyssistant/blob/master/src/main.py)
 
 # dependencies
